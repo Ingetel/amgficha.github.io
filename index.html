@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia clínica Corporal AMG</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header img {
+            max-height: 150px; /* Ajusta el tamaño según lo necesites */
+            width: auto;
+        }
+    </style>
+</head>
+<body id="ficha-completa">
+    <header>
+        <h1>Ficha Clínica Corporal AMG</h1>
+
+        <img src="logo.jpg" alt="Logo AMG">
+    </header>
+
+    <section class="info-contacto" id="seccion1">
+        <h2>Información de Contacto</h2>
+        <form>
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label>Dirección:</label>
+                <input type="text" name="direccion">
+            </div>
+            <div class="form-group">
+                <label>Fecha:</label>
+                <input type="date" name="fecha">
+            </div>
+            <div class="form-group">
+                <label>Teléfono / Whatsapp:</label>
+                <input type="text" name="telefono">
+            </div>
+            <div class="form-group">
+                <label>Redes Instagram/Facebook:</label>
+                <input type="text" name="redes">
+            </div>
+            <div class="form-group">
+                <label>No. Expediente:</label>
+                <input type="text" name="expediente">
+            </div>
+        </form>
+    </section>
+
+    <section class="datos-clinicos">
+        <h2>Datos Clínicos</h2>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="cardiaca"> Enf. Cardíacas</label>
+            <label><input type="checkbox" name="renales"> Enf. Renales</label>
+            <label><input type="checkbox" name="circulatorias"> Enf. Circulatorias</label>
+            <label><input type="checkbox" name="pulmonares"> Enf. Pulmonares</label>
+            <label><input type="checkbox" name="digestivas"> Enf. Digestivas</label>
+            <label><input type="checkbox" name="endocrinas"> Enf. Endocrinas</label>
+            <label><input type="checkbox" name="neurologicas"> Enf. Neurológicas</label>
+            <label><input type="checkbox" name="presion"> Problemas de Presión</label>
+            <label><input type="checkbox" name="alergia"> Algún tipo de Alergía</label>
+            <label><input type="checkbox" name="piel"> Problemas en la Piel</label>
+            <label><input type="checkbox" name="convulsiones"> Sufre Convulsiones</label>
+            <label><input type="checkbox" name="tabaco"> Tabaco</label>
+            <label><input type="checkbox" name="alcohol"> Alcohol</label>
+            <label><input type="checkbox" name="drogas"> Drogas</label>
+            <label><input type="checkbox" name="marcapaso"> Disp. int, Marcapaso</label><br>
+        </div>
+        <div class="datos-personales">
+            <br>
+            <label>Edad:</label><input type="text" name="edad">
+            <label>Peso:</label><input type="text" name="peso">
+            <label>Estatura:</label><input type="text" name="estatura">
+            <label>Sexo:</label><input type="radio" name="sexo" value="H"> H <input type="radio" name="sexo" value="M"> M <br>
+            <label>Tipo de Sangre:</label><input type="text" name="sangre">
+        </div>
+    </section>
+
+    <section class="medidas">
+        <h2>Medidas</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Inicio</th>
+                <th>Medio</th>
+                <th>Final</th>
+            </tr>
+            <tr>
+                <td>Cintura</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+            <tr>
+                <td>Busto</td>
+                <td><input type="text" name="busto_inicio"></td>
+                <td><input type="text" name="busto_medio"></td>
+                <td><input type="text" name="busto_final"></td>
+            </tr>
+            <tr>
+                <td>Cadera</td>
+                <td><input type="text" name="cadera_inicio"></td>
+                <td><input type="text" name="cadera_medio"></td>
+                <td><input type="text" name="cadera_final"></td>
+            </tr>
+            <tr>
+                <td>Abdomen</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+
+            <tr>
+                <td>Brazo Izquierdo</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+
+            <tr>
+                <td>Brazo Derecho</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+
+            <tr>
+                <td>Musio Izquierdo</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+
+            <tr>
+                <td>Musio Derecho</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+
+            <tr>
+                <td>Pantorrilla Derecha</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+            
+            <tr>
+                <td>Pantorrilla Izquierda</td>
+                <td><input type="text" name="cintura_inicio"></td>
+                <td><input type="text" name="cintura_medio"></td>
+                <td><input type="text" name="cintura_final"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="sesiones-programadas">
+        <h2>Sesiones Programadas</h2>
+        <div class="sesiones">
+            <div>Sesión 1<br>Fecha: <input type="date" name="sesion1"></div>
+            <div>Sesión 2<br>Fecha: <input type="date" name="sesion2"></div>
+            <div>Sesión 3<br>Fecha: <input type="date" name="sesion2"></div>
+            <div>Sesión 4<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 5<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 6<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 7<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 8<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 9<br>Fecha: <input type="date" name="sesion3"></div>
+            <div>Sesión 10<br>Fecha: <input type="date" name="sesion3"></div>
+
+        </div>
+    </section>
+
+    <section class="otros">
+        <div class="diagnostico">
+            <h2>Diagnóstico y Tratamiento</h2>
+            <textarea name="diagnostico"></textarea>
+        </div>
+        <div class="presupuesto">
+            <h2>Presupuesto</h2>
+            <textarea name="presupuesto"></textarea>
+        </div>
+        <div class="aceptacion">
+            <h2>Aceptación / Firma</h2>
+            <input type="text" name="firma">
+        </div>
+    </section>
+
+    <button class="btn-guardar" onclick="guardarImagen()">Guardar como Imagen</button>
+
+
+    <footer>
+        <p>© 2024 Ficha Clínica AMG. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function guardarImagen() {
+            // Obtener el nombre y la fecha de la sesión
+            const nombreCliente = document.getElementById('nombre').value || "Cliente";
+            const fechaSesion = document.querySelector('[name="sesion1"]').value || "Fecha";
+
+            // Secciones a capturar
+            const seccion1 = document.getElementById('ficha-completa'); // Desde el encabezado hasta Medidas
+            const seccion2 = document.querySelector('.sesiones-programadas'); // Desde Sesiones Programadas hasta Aceptación / Firma
+            const seccion3 = document.querySelector('.diagnostico');
+            const seccion4 = document.querySelector('.presupuesto');
+            const seccion5 = document.querySelector('.aceptacion');
+
+            // Captura y descarga la primera imagen (Ficha Clínica hasta Medidas)
+            html2canvas(seccion1).then(canvas1 => {
+                const link1 = document.createElement('a');
+                link1.href = canvas1.toDataURL('image/png');
+                link1.download = `${nombreCliente}_${fechaSesion}_Parte1.png`;
+                link1.click();
+            });
+
+            // Captura y descarga la segunda imagen (Sesiones Programadas hasta Aceptación / Firma)
+            html2canvas(seccion2).then(canvas2 => {
+                const link2 = document.createElement('a');
+                link2.href = canvas2.toDataURL('image/png');
+                link2.download = `${nombreCliente}_${fechaSesion}_Parte2.png`;
+                link2.click();
+            });
+            html2canvas(seccion3).then(canvas3 => {
+                const link3 = document.createElement('a');
+                link3.href = canvas3.toDataURL('image/png');
+                link3.download = `${nombreCliente}_${fechaSesion}_Parte2.png`;
+                link3.click();
+            });
+            html2canvas(seccion4).then(canvas4 => {
+                const link4 = document.createElement('a');
+                link4.href = canvas4.toDataURL('image/png');
+                link4.download = `${nombreCliente}_${fechaSesion}_Parte2.png`;
+                link4.click();
+            });
+            html2canvas(seccion5).then(canvas5 => {
+                const link5 = document.createElement('a');
+                link5.href = canvas5.toDataURL('image/png');
+                link5.download = `${nombreCliente}_${fechaSesion}_Parte2.png`;
+                link5.click();
+            });
+        }
+    </script>
+</body>
+</html>
